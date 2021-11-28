@@ -20,7 +20,7 @@ public class LionNotParameterizedTest {
     Feline feline;
 
     @Test
-    public void getKittens_count_1_return_1() throws Exception {
+    public void getKittensWithoutParametersReturnExpectedCountKittens() throws Exception {
         Lion lion = new Lion(feline,"Самец");
         Mockito.when(feline.getKittens()).thenReturn(1);
         int actual = lion.getKittens();
@@ -28,7 +28,7 @@ public class LionNotParameterizedTest {
     }
 
     @Test
-    public void getFood_predator_returnListForPredator() throws Exception {
+    public void getFoodPredatorReturnListForPredator() throws Exception {
         Lion lion = new Lion(feline,"Самец");
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> actual = lion.getFood();

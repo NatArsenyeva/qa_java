@@ -16,7 +16,7 @@ public class LionExceptionTest {
     Feline feline;
 
     @Test
-    public void doesHaveMane_unknownSex_shouldReturnException()  {
+    public void doesHaveManeUnknownSexReturnException()  {
         try {
             Lion lion = new Lion(feline,"Не определен") ;
             lion.doesHaveMane();

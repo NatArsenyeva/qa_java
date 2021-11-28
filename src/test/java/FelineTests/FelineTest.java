@@ -11,25 +11,25 @@ public class FelineTest {
     Feline feline = new Feline();
 
    @Test
-    public void eatMeat_predator_returnListForPredator() throws Exception {
+    public void eatMeatPredatorReturnListForPredator() throws Exception {
        List<String> actual = feline.eatMeat();
        assertEquals(List.of("Животные", "Птицы", "Рыба"),actual);
    }
 
     @Test
-    public void getFamily_returnExpectedValue() {
+    public void getFamilyReturnExpectedValue() {
         String actual = feline.getFamily();
         assertEquals("Кошачьи",actual);
     }
 
     @Test
-    public void getKittens_withoutParameters_return_1(){
+    public void getKittensWithoutParametersReturnExpectedCountKittens(){
         int actual = feline.getKittens();
         assertEquals(1,actual);
     }
 
     @Test
-    public void getKittens_withCount_2_return_2(){
+    public void getKittensWithParametersReturnExpectedCountKittens(){
         int actual = feline.getKittens(2);
         assertEquals(2,actual);
     }
